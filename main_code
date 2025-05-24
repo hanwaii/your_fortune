@@ -1,429 +1,487 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discover Your Multifaceted Self</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Custom font for a consistent look */
-        body {
-            font-family: "Inter", sans-serif;
-        }
-    </style>
-</head>
-<body class="min-h-screen bg-gradient-to-br from-purple-800 to-indigo-900 flex items-center justify-center p-4">
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Discover Your Multifaceted Self</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+     <style>
+         /* Custom font for a consistent look */
+         body {
+             font-family: "Inter", sans-serif;
+         }
+         /* Add some margin between trait paragraphs for better readability */
+         #personalityTraitsContent p {
+             margin-bottom: 0.75rem; /* Tailwind's mb-3 equivalent */
+             padding: 0.5rem 0; /* Add some vertical padding */
+             border-bottom: 1px dashed #e5e7eb; /* Subtle separator */
+         }
+         #personalityTraitsContent p:last-child {
+             border-bottom: none; /* No separator for the last one */
+         }
+     </style>
+ </head>
+ <body class="min-h-screen bg-gradient-to-br from-purple-900 to-blue-900 flex items-center justify-center p-4 overflow-auto">
 
-    <div class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-md text-center">
-        <h1 class="text-4xl font-extrabold text-gray-900 mb-6 tracking-tight">
-            Discover Your Multifaceted Self
-        </h1>
+     <div class="relative bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg border border-gray-200 border-opacity-30 rounded-3xl shadow-2xl p-8 w-full max-w-md text-center transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-3xl">
+         <h1 class="text-4xl font-extrabold text-white mb-6 tracking-tight drop-shadow-lg">
+             Discover Your Cosmic Self
+         </h1>
 
-        <div class="mb-6">
-            <label for="birthdate" class="block text-gray-700 text-lg font-semibold mb-2">
-                Enter Your Birth Date:
-            </label>
-            <input
-                type="date"
-                id="birthdate"
-                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-lg"
-                />
-        </div>
+         <div class="bg-white bg-opacity-90 p-6 rounded-2xl shadow-xl mb-6">
+             <label for="birthdate" class="block text-gray-800 text-lg font-semibold mb-2">
+                 Enter Your Birth Date:
+             </label>
+             <input
+                 type="date"
+                 id="birthdate"
+                 class="w-full p-3 border-2 border-purple-400 rounded-lg focus:outline-none focus:ring-4 focus:ring-purple-600 focus:border-transparent text-lg bg-purple-50 transition duration-300 ease-in-out"
+                 />
+         </div>
 
-        <div class="mb-6 text-left">
-            <label class="block text-gray-700 text-lg font-semibold mb-2">
-                Your Sex:
-            </label>
-            <div class="flex flex-wrap gap-4 justify-center">
-                <label class="inline-flex items-center">
-                    <input
-                        type="radio"
-                        name="sex"
-                        value="male"
-                        checked
-                        class="form-radio h-5 w-5 text-purple-600"
-                    />
-                    <span class="ml-2 text-gray-700 text-lg">Male</span>
-                </label>
-                <label class="inline-flex items-center">
-                    <input
-                        type="radio"
-                        name="sex"
-                        value="female"
-                        class="form-radio h-5 w-5 text-purple-600"
-                    />
-                    <span class="ml-2 text-gray-700 text-lg">Female</span>
-                </label>
-                <label class="inline-flex items-center">
-                    <input
-                        type="radio"
-                        name="sex"
-                        value="prefer-not-to-say"
-                        class="form-radio h-5 w-5 text-purple-600"
-                    />
-                    <span class="ml-2 text-gray-700 text-lg">Prefer not to say</span>
-                </label>
-            </div>
-        </div>
+         <div class="bg-white bg-opacity-90 p-6 rounded-2xl shadow-xl mb-6 text-left">
+             <label class="block text-gray-800 text-lg font-semibold mb-2">
+                 Your Sex:
+             </label>
+             <div class="flex flex-wrap gap-4 justify-center">
+                 <label class="inline-flex items-center cursor-pointer p-2 rounded-full transition duration-200 ease-in-out hover:bg-purple-100">
+                     <input
+                         type="radio"
+                         name="sex"
+                         value="male"
+                         checked
+                         class="form-radio h-5 w-5 text-purple-600 border-purple-400 focus:ring-purple-500"
+                     />
+                     <span class="ml-2 text-gray-800 text-lg font-medium">Male</span>
+                 </label>
+                 <label class="inline-flex items-center cursor-pointer p-2 rounded-full transition duration-200 ease-in-out hover:bg-purple-100">
+                     <input
+                         type="radio"
+                         name="sex"
+                         value="female"
+                         class="form-radio h-5 w-5 text-purple-600 border-purple-400 focus:ring-purple-500"
+                     />
+                     <span class="ml-2 text-gray-800 text-lg font-medium">Female</span>
+                 </label>
+                 <label class="inline-flex items-center cursor-pointer p-2 rounded-full transition duration-200 ease-in-out hover:bg-purple-100">
+                     <input
+                         type="radio"
+                         name="sex"
+                         value="prefer-not-to-say"
+                         class="form-radio h-5 w-5 text-purple-600 border-purple-400 focus:ring-purple-500"
+                     />
+                     <span class="ml-2 text-gray-800 text-lg font-medium">Prefer not to say</span>
+                 </label>
+             </div>
+         </div>
 
-        <button
-            id="getSignsButton"
-            class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 text-xl"
-        >
-            Get My Signs & Traits
-        </button>
+         <button
+             id="getSignsButton"
+             class="w-full bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-white text-xl uppercase tracking-wider"
+         >
+             Get My Signs & Traits
+         </button>
 
-        <p id="errorMessage" class="mt-4 text-red-600 text-lg font-medium hidden"></p>
+         <p id="errorMessage" class="mt-4 text-red-400 text-lg font-medium hidden drop-shadow-md"></p>
 
-        <div id="resultsContainer" class="mt-6 p-6 bg-purple-50 rounded-lg border border-purple-200 shadow-inner text-left hidden">
-            <h2 class="text-3xl font-bold text-purple-800 mb-4 text-center">
-                Your Astrological Insights
-            </h2>
+         <div id="resultsContainer" class="mt-6 p-6 bg-white bg-opacity-90 rounded-2xl shadow-xl text-left hidden">
+             <h2 class="text-3xl font-bold text-purple-800 mb-4 text-center">
+                 Your Astrological Insights
+             </h2>
 
-            <div id="westernZodiacSection" class="mb-4 hidden">
-                <h3 class="text-2xl font-semibold text-purple-700 mb-2">
-                    Western Zodiac: <span id="westernZodiacSign" class="text-purple-600"></span>
-                </h3>
-            </div>
+             <div id="westernZodiacSection" class="mb-4 p-3 bg-purple-50 rounded-lg border border-purple-200 shadow-sm hidden">
+                 <h3 class="text-2xl font-semibold text-purple-700 mb-2">
+                     Western Zodiac: <span id="westernZodiacSign" class="text-purple-600"></span>
+                 </h3>
+             </div>
 
-            <div id="chineseZodiacSection" class="mb-4 hidden">
-                <h3 class="text-2xl font-semibold text-purple-700 mb-2">
-                    Chinese Zodiac: <span id="chineseZodiacSign" class="text-purple-600"></span>
-                </h3>
-                <p class="text-gray-800 text-lg leading-relaxed">
-                    Based on your birth year, your Chinese Zodiac animal is the <span id="chineseZodiacDesc" class="font-semibold"></span>.
-                </p>
-            </div>
+             <div id="chineseZodiacSection" class="mb-4 p-3 bg-purple-50 rounded-lg border border-purple-200 shadow-sm hidden">
+                 <h3 class="text-2xl font-semibold text-purple-700 mb-2">
+                     Chinese Zodiac: <span id="chineseZodiacSign" class="text-purple-600"></span>
+                 </h3>
+             </div>
 
-            <div id="egyptianSignSection" class="mb-4 hidden">
-                <h3 class="text-2xl font-semibold text-purple-700 mb-2">
-                    Egyptian Sign: <span id="egyptianSign" class="text-purple-600"></span>
-                </h3>
-                <p class="text-gray-800 text-lg leading-relaxed">
-                    Your Egyptian astrological sign is <span id="egyptianSignDesc" class="font-semibold"></span>.
-                </p>
-            </div>
+             <div id="egyptianSignSection" class="mb-4 p-3 bg-purple-50 rounded-lg border border-purple-200 shadow-sm hidden">
+                 <h3 class="text-2xl font-semibold text-purple-700 mb-2">
+                     Egyptian Sign: <span id="egyptianSign" class="text-purple-600"></span>
+                 </h3>
+             </div>
 
-            <div id="mayanSignSection" class="mb-4 hidden">
-                <h3 class="text-2xl font-semibold text-purple-700 mb-2">
-                    Mayan Day Sign: <span id="mayanSign" class="text-purple-600"></span>
-                </h3>
-                <p class="text-gray-800 text-lg leading-relaxed">
-                    Your Mayan Day Sign is <span id="mayanSignDesc" class="font-semibold"></span>.
-                </p>
-            </div>
+             <div id="mayanSignSection" class="mb-4 p-3 bg-purple-50 rounded-lg border border-purple-200 shadow-sm hidden">
+                 <h3 class="text-2xl font-semibold text-purple-700 mb-2">
+                     Mayan Day Sign: <span id="mayanSign" class="text-purple-600"></span>
+                 </h3>
+             </div>
 
-            <div id="lifePathNumberSection" class="mb-4 hidden">
-                <h3 class="text-2xl font-semibold text-purple-700 mb-2">
-                    Numerology Life Path: <span id="lifePathNumber" class="text-purple-600"></span>
-                </h3>
-                <p class="text-gray-800 text-lg leading-relaxed">
-                    Your Numerology Life Path Number is <span id="lifePathNumberDesc" class="font-semibold"></span>.
-                </p>
-            </div>
+             <div id="lifePathNumberSection" class="mb-4 p-3 bg-purple-50 rounded-lg border border-purple-200 shadow-sm hidden">
+                 <h3 class="text-2xl font-semibold text-purple-700 mb-2">
+                     Numerology Life Path: <span id="lifePathNumber" class="text-purple-600"></span>
+                 </h3>
+             </div>
 
-            <div id="personalityTraitsSection" class="mt-4 pt-4 border-t border-purple-200 hidden">
-                <h3 class="text-2xl font-semibold text-purple-700 mb-2">
-                    Personality Traits:
-                </h3>
-                <p id="personalityTraitsText" class="text-gray-800 text-lg leading-relaxed"></p>
-            </div>
+             <div id="personalityTraitsSection" class="mt-4 pt-4 border-t-2 border-purple-300 hidden">
+                 <h3 class="text-2xl font-semibold text-purple-800 mb-2">
+                     Personality Traits:
+                 </h3>
+                 <div id="personalityTraitsContent" class="text-gray-800 text-lg leading-relaxed">
+                     </div>
+             </div>
 
-            <p id="loadingMessage" class="text-gray-600 text-lg mt-4 pt-4 border-t border-purple-200 hidden">
-                Personality traits are being generated...
-            </p>
-        </div>
-    </div>
+             <p id="loadingMessage" class="text-gray-600 text-lg mt-4 pt-4 border-t border-purple-200 hidden">
+                 Personality traits are being generated...
+             </p>
+         </div>
+     </div>
 
-    <script>
-        // DOM Elements
-        const birthDateInput = document.getElementById('birthdate');
-        const sexRadios = document.querySelectorAll('input[name="sex"]');
-        const getSignsButton = document.getElementById('getSignsButton');
-        const errorMessage = document.getElementById('errorMessage');
-        const resultsContainer = document.getElementById('resultsContainer');
-        const westernZodiacSignSpan = document.getElementById('westernZodiacSign');
-        const chineseZodiacSignSpan = document.getElementById('chineseZodiacSign');
-        const chineseZodiacDescSpan = document.getElementById('chineseZodiacDesc');
-        const egyptianSignSpan = document.getElementById('egyptianSign');
-        const egyptianSignDescSpan = document.getElementById('egyptianSignDesc');
-        const mayanSignSpan = document.getElementById('mayanSign');
-        const mayanSignDescSpan = document.getElementById('mayanSignDesc');
-        const lifePathNumberSpan = document.getElementById('lifePathNumber');
-        const lifePathNumberDescSpan = document.getElementById('lifePathNumberDesc');
-        const personalityTraitsTextP = document.getElementById('personalityTraitsText');
-        const loadingMessage = document.getElementById('loadingMessage');
+     <script>
+         // DOM Elements
+         const birthDateInput = document.getElementById('birthdate');
+         const sexRadios = document.querySelectorAll('input[name="sex"]');
+         const getSignsButton = document.getElementById('getSignsButton');
+         const errorMessage = document.getElementById('errorMessage');
+         const resultsContainer = document.getElementById('resultsContainer');
 
-        // Sections
-        const westernZodiacSection = document.getElementById('westernZodiacSection');
-        const chineseZodiacSection = document.getElementById('chineseZodiacSection');
-        const egyptianSignSection = document.getElementById('egyptianSignSection');
-        const mayanSignSection = document.getElementById('mayanSignSection');
-        const lifePathNumberSection = document.getElementById('lifePathNumberSection');
-        const personalityTraitsSection = document.getElementById('personalityTraitsSection');
+         // Spans for displaying the calculated signs
+         const westernZodiacSignSpan = document.getElementById('westernZodiacSign');
+         const chineseZodiacSignSpan = document.getElementById('chineseZodiacSign');
+         const egyptianSignSpan = document.getElementById('egyptianSign');
+         const mayanSignSpan = document.getElementById('mayanSign');
+         const lifePathNumberSpan = document.getElementById('lifePathNumber');
 
-        // Helper function to get day of the year (1-366)
-        const getDayOfYear = (date) => {
-            const start = new Date(date.getFullYear(), 0, 0);
-            const diff = date - start;
-            const oneDay = 1000 * 60 * 60 * 24;
-            return Math.floor(diff / oneDay);
-        };
+         // Main container for personality traits
+         const personalityTraitsContentDiv = document.getElementById('personalityTraitsContent');
 
-        // Function to calculate the Western Zodiac sign based on month and day
-        const calculateWesternZodiacSign = (dateString) => {
-            const date = new Date(dateString);
-            const month = date.getMonth() + 1; // getMonth() returns 0-11
-            const day = date.getDate();
+         // Sections for showing/hiding the main sign blocks
+         const westernZodiacSection = document.getElementById('westernZodiacSection');
+         const chineseZodiacSection = document.getElementById('chineseZodiacSection');
+         const egyptianSignSection = document.getElementById('egyptianSignSection');
+         const mayanSignSection = document.getElementById('mayanSignSection');
+         const lifePathNumberSection = document.getElementById('lifePathNumberSection');
+         const personalityTraitsSection = document.getElementById('personalityTraitsSection'); // The main traits section
 
-            if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) return 'Aries';
-            if ((month === 4 && day >= 20) || (month === 5 && day <= 20)) return 'Taurus';
-            if ((month === 5 && day >= 21) || (month === 6 && day <= 20)) return 'Gemini';
-            if ((month === 6 && day >= 21) || (month === 7 && day <= 22)) return 'Cancer';
-            if ((month === 7 && day >= 23) || (month === 8 && day <= 22)) return 'Leo';
-            if ((month === 8 && day >= 23) || (month === 9 && day <= 22)) return 'Virgo';
-            if ((month === 9 && day >= 23) || (month === 10 && day <= 22)) return 'Libra';
-            if ((month === 10 && day >= 23) || (month === 11 && day <= 21)) return 'Scorpio';
-            if ((month === 11 && day >= 22) || (month === 12 && day <= 21)) return 'Sagittarius';
-            if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) return 'Capricorn';
-            if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) return 'Aquarius';
-            if ((month === 2 && day >= 19) || (month === 3 && day <= 20)) return 'Pisces';
-            return 'Unknown';
-        };
+         const loadingMessage = document.getElementById('loadingMessage');
 
-        // Function to calculate the Chinese Zodiac sign based on birth year
-        const calculateChineseZodiacSign = (dateString) => {
-            const date = new Date(dateString);
-            const year = date.getFullYear();
-            const zodiacAnimals = [
-                'Rat', 'Ox', 'Tiger', 'Rabbit', 'Dragon', 'Snake',
-                'Horse', 'Goat', 'Monkey', 'Rooster', 'Dog', 'Pig'
-            ];
-            const startYear = 1900; // Year of the Rat
-            let effectiveYear = year;
-            if (year < startYear) {
-                effectiveYear = startYear - ((startYear - year) % 12);
-            }
-            return zodiacAnimals[(effectiveYear - startYear) % 12];
-        };
+         // Helper function to get day of the year (1-366)
+         const getDayOfYear = (date) => {
+             const start = new Date(date.getFullYear(), 0, 0);
+             const diff = date - start;
+             const oneDay = 1000 * 60 * 60 * 24;
+             return Math.floor(diff / oneDay);
+         };
 
-        // Function to calculate the Egyptian sign
-        const calculateEgyptianSign = (dateString) => {
-            const date = new Date(dateString);
-            const month = date.getMonth() + 1;
-            const day = date.getDate();
+         // Function to calculate the Western Zodiac sign based on month and day
+         const calculateWesternZodiacSign = (dateString) => {
+             const date = new Date(dateString);
+             const month = date.getMonth() + 1; // getMonth() returns 0-11
+             const day = date.getDate();
 
-            if ((month === 1 && day >= 8 && day <= 21) || (month === 2 && day >= 1 && day <= 11)) return 'Amun-Ra';
-            if ((month === 1 && day >= 22 && day <= 31) || (month === 9 && day >= 22 && day <= 30)) return 'Mut';
-            if ((month === 2 && day >= 12 && day <= 29) || (month === 8 && day >= 20 && day <= 31)) return 'Osiris';
-            if ((month === 3 && day >= 1 && day <= 10) || (month === 10 && day >= 27 && day <= 31) || (month === 11 && day >= 1 && day <= 2)) return 'Isis';
-            if ((month === 3 && day >= 11 && day <= 31) || (month === 10 && day >= 16 && day <= 26)) return 'Thoth';
-            if ((month === 4 && day >= 1 && day <= 19) || (month === 11 && day >= 8 && day <= 17)) return 'Horus';
-            if ((month === 4 && day >= 20 && day <= 30) || (month === 5 && day >= 1 && day <= 8) || (month === 9 && day >= 8 && day <= 21)) return 'Anubis';
-            if ((month === 5 && day >= 9 && day <= 27) || (month === 6 && day >= 28 && day <= 30) || (month === 7 && day >= 1 && day <= 13)) return 'Seth';
-            if ((month === 5 && day >= 28 && day <= 31) || (month === 6 && day >= 1 && day <= 18) || (month === 9 && day >= 28 && day <= 30) || (month === 10 && day >= 1 && day <= 2)) return 'Bastet';
-            if ((month === 6 && day >= 19 && day <= 28) || (month === 9 && day >= 1 && day <= 7) || (month === 11 && day >= 18 && day <= 26)) return 'Sekhmet';
-            if ((month === 7 && day >= 14 && day <= 31) || (month === 8 && day >= 1 && day <= 15) || (month === 11 && day >= 27 && day <= 30) || (month === 12 && day >= 1 && day <= 25)) return 'Hapi';
-            if ((month === 12 && day >= 26 && day <= 31) || (month === 1 && day >= 1 && day <= 7) || (month === 6 && day >= 1 && day <= 7)) return 'Geb';
-            return 'Unknown Egyptian Sign';
-        };
+             if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) return 'Aries';
+             if ((month === 4 && day >= 20) || (month === 5 && day <= 20)) return 'Taurus';
+             if ((month === 5 && day >= 21) || (month === 6 && day <= 20)) return 'Gemini';
+             if ((month === 6 && day >= 21) || (month === 7 && day <= 22)) return 'Cancer';
+             if ((month === 7 && day >= 23) || (month === 8 && day <= 22)) return 'Leo';
+             if ((month === 8 && day >= 23) || (month === 9 && day <= 22)) return 'Virgo';
+             if ((month === 9 && day >= 23) || (month === 10 && day <= 22)) return 'Libra';
+             if ((month === 10 && day >= 23) || (month === 11 && day <= 21)) return 'Scorpio';
+             if ((month === 11 && day >= 22) || (month === 12 && day <= 21)) return 'Sagittarius';
+             if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) return 'Capricorn';
+             if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) return 'Aquarius';
+             if ((month === 2 && day >= 19) || (month === 3 && day <= 20)) return 'Pisces';
+             return 'Unknown';
+         };
 
-        // Function to calculate the Mayan Day Sign (simplified using day of year)
-        const calculateMayanSign = (dateString) => {
-            const date = new Date(dateString);
-            const dayOfYear = getDayOfYear(date);
+         // Function to calculate the Chinese Zodiac sign based on birth year
+         const calculateChineseZodiacSign = (dateString) => {
+             const date = new Date(dateString);
+             const year = date.getFullYear();
+             const zodiacAnimals = [
+                 'Rat', 'Ox', 'Tiger', 'Rabbit', 'Dragon', 'Snake',
+                 'Horse', 'Goat', 'Monkey', 'Rooster', 'Dog', 'Pig'
+             ];
+             const startYear = 1900; // Year of the Rat
+             let effectiveYear = year;
+             if (year < startYear) {
+                 effectiveYear = startYear - ((startYear - year) % 12);
+             }
+             return zodiacAnimals[(effectiveYear - startYear) % 12];
+         };
 
-            const mayanDaySigns = [
-                'Imix (Crocodile)', 'Ik (Wind)', 'Akbal (Night)', 'Kan (Corn)', 'Chicchan (Serpent)',
-                'Cimi (Death)', 'Manik (Deer)', 'Lamat (Rabbit)', 'Muluc (Water)', 'Oc (Dog)',
-                'Chuen (Monkey)', 'Eb (Road)', 'Ben (Reed)', 'Ix (Jaguar)', 'Men (Eagle)',
-                'Cib (Owl)', 'Caban (Earth)', 'Etznab (Flint)', 'Cauac (Storm)', 'Ahau (Lord)'
-            ];
+         // Function to calculate the Egyptian sign
+         const calculateEgyptianSign = (dateString) => {
+             const date = new Date(dateString);
+             const month = date.getMonth() + 1;
+             const day = date.getDate();
 
-            const index = (dayOfYear + 5) % 20; // +5 is arbitrary offset for varied demo
-            return mayanDaySigns[index];
-        };
+             if ((month === 1 && day >= 8 && day <= 21) || (month === 2 && day >= 1 && day <= 11)) return 'Amun-Ra';
+             if ((month === 1 && day >= 22 && day <= 31) || (month === 9 && day >= 22 && day <= 30)) return 'Mut';
+             if ((month === 2 && day >= 12 && day <= 29) || (month === 8 && day >= 20 && day <= 31)) return 'Osiris';
+             if ((month === 3 && day >= 1 && day <= 10) || (month === 10 && day >= 27 && day <= 31) || (month === 11 && day >= 1 && day <= 2)) return 'Isis';
+             if ((month === 3 && day >= 11 && day <= 31) || (month === 10 && day >= 16 && day <= 26)) return 'Thoth';
+             if ((month === 4 && day >= 1 && day <= 19) || (month === 11 && day >= 8 && day <= 17)) return 'Horus';
+             if ((month === 4 && day >= 20 && day <= 30) || (month === 5 && day >= 1 && day <= 8) || (month === 9 && day >= 8 && day <= 21)) return 'Anubis';
+             if ((month === 5 && day >= 9 && day <= 27) || (month === 6 && day >= 28 && day <= 30) || (month === 7 && day >= 1 && day <= 13)) return 'Seth';
+             if ((month === 5 && day >= 28 && day <= 31) || (month === 6 && day >= 1 && day <= 18) || (month === 9 && day >= 28 && day <= 30) || (month === 10 && day >= 1 && day <= 2)) return 'Bastet';
+             if ((month === 6 && day >= 19 && day <= 28) || (month === 9 && day >= 1 && day <= 7) || (month === 11 && day >= 18 && day <= 26)) return 'Sekhmet';
+             if ((month === 7 && day >= 14 && day <= 31) || (month === 8 && day >= 1 && day <= 15) || (month === 11 && day >= 27 && day <= 30) || (month === 12 && day >= 1 && day <= 25)) return 'Hapi';
+             if ((month === 12 && day >= 26 && day <= 31) || (month === 1 && day >= 1 && day <= 7) || (month === 6 && day >= 1 && day <= 7)) return 'Geb';
+             return 'Unknown Egyptian Sign';
+         };
 
-        // Function to calculate the Numerology Life Path Number
-        const calculateLifePathNumber = (dateString) => {
-            const date = new Date(dateString);
-            const year = date.getFullYear();
-            const month = date.getMonth() + 1;
-            const day = date.getDate();
+         // Function to calculate the Mayan Day Sign (simplified using day of year)
+         const calculateMayanSign = (dateString) => {
+             const date = new Date(dateString);
+             const dayOfYear = getDayOfYear(date);
 
-            let sum = 0;
+             const mayanDaySigns = [
+                 'Imix (Crocodile)', 'Ik (Wind)', 'Akbal (Night)', 'Kan (Corn)', 'Chicchan (Serpent)',
+                 'Cimi (Death)', 'Manik (Deer)', 'Lamat (Rabbit)', 'Muluc (Water)', 'Oc (Dog)',
+                 'Chuen (Monkey)', 'Eb (Road)', 'Ben (Reed)', 'Ix (Jaguar)', 'Men (Eagle)',
+                 'Cib (Owl)', 'Caban (Earth)', 'Etznab (Flint)', 'Cauac (Storm)', 'Ahau (Lord)'
+             ];
 
-            const reduceToSingleDigit = (num) => {
-                let s = String(num);
-                let tempSum = 0;
-                for (let i = 0; i < s.length; i++) {
-                    tempSum += parseInt(s[i], 10);
-                }
-                return tempSum;
-            };
+             const index = (dayOfYear + 5) % 20; // +5 is arbitrary offset for varied demo
+             return mayanDaySigns[index];
+         };
 
-            // Add day
-            let reducedDay = reduceToSingleDigit(day);
-            if (day === 11 || day === 22 || day === 33) reducedDay = day; // Keep master numbers if they appear as single day
-            sum += reducedDay;
+         // Function to calculate the Numerology Life Path Number
+         const calculateLifePathNumber = (dateString) => {
+             const date = new Date(dateString);
+             const year = date.getFullYear();
+             const month = date.getMonth() + 1;
+             const day = date.getDate();
 
-            // Add month
-            let reducedMonth = reduceToSingleDigit(month);
-            if (month === 11) reducedMonth = month; // Keep master number
-            sum += reducedMonth;
+             let sum = 0;
 
-            // Add year
-            let yearSum = reduceToSingleDigit(year);
-            while (yearSum > 9 && yearSum !== 11 && yearSum !== 22 && yearSum !== 33) {
-                yearSum = reduceToSingleDigit(yearSum);
-            }
-            sum += yearSum;
+             const reduceToSingleDigit = (num) => {
+                 let s = String(num);
+                 let tempSum = 0;
+                 for (let i = 0; i < s.length; i++) {
+                     tempSum += parseInt(s[i], 10);
+                 }
+                 return tempSum;
+             };
 
-            // Reduce overall sum
-            while (sum > 9 && sum !== 11 && sum !== 22 && sum !== 33) {
-                sum = reduceToSingleDigit(sum);
-            }
+             // Add day
+             let reducedDay = reduceToSingleDigit(day);
+             if (day === 11 || day === 22 || day === 33) reducedDay = day; // Keep master numbers if they appear as single day
+             sum += reducedDay;
 
-            return sum.toString();
-        };
+             // Add month
+             let reducedMonth = reduceToSingleDigit(month);
+             if (month === 11) reducedMonth = month; // Keep master number
+             sum += reducedMonth;
 
-        // Function to fetch personality traits from the Gemini API
-        const fetchPersonalityTraits = async (westernSign, chineseSign, egyptianSign, mayanSign, lifePathNum, userSex) => {
-            getSignsButton.disabled = true; // Disable button during loading
-            loadingMessage.classList.remove('hidden'); // Show loading message
-            errorMessage.classList.add('hidden'); // Hide error message
-            personalityTraitsTextP.textContent = ''; // Clear previous text
+             // Add year
+             let yearSum = reduceToSingleDigit(year);
+             while (yearSum > 9 && yearSum !== 11 && yearSum !== 22 && yearSum !== 33) {
+                 yearSum = reduceToSingleDigit(yearSum);
+             }
+             sum += yearSum;
 
-            try {
-                let sexSpecificPrompt = '';
-                if (userSex === 'male') {
-                    sexSpecificPrompt = 'specifically for a male, considering common masculine traits associated with these signs.';
-                } else if (userSex === 'female') {
-                    sexSpecificPrompt = 'specifically for a female, considering common feminine traits associated with these signs.';
-                } else {
-                    sexSpecificPrompt = 'providing general traits applicable to all.';
-                }
+             // Reduce overall sum
+             while (sum > 9 && sum !== 11 && sum !== 22 && sum !== 33) {
+                 sum = reduceToSingleDigit(sum);
+             }
 
-                // Construct the prompt for the Gemini API to get personality traits
-                const prompt = `Based on the unique combination of the following signs derived from their birth date:
-                    Western Zodiac: '${westernSign}',
-                    Chinese Zodiac: '${chineseSign}',
-                    Egyptian Sign: '${egyptianSign}',
-                    Mayan Day Sign: '${mayanSign}',
-                    and a Numerological Life Path Number of ${lifePathNum},
-                    generate a concise summary of key personality traits, ${sexSpecificPrompt} Focus on strengths, general characteristics, and potential inclinations based on the combined influences of these systems. Keep it to about 150-200 words.`;
+             return sum.toString();
+         };
 
-                // Prepare the chat history for the API request
-                let chatHistory = [];
-                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+         // Function to fetch personality traits from the Gemini API
+         const fetchPersonalityTraits = async (westernSign, chineseSign, egyptianSign, mayanSign, lifePathNum, userSex) => {
+             getSignsButton.disabled = true; // Disable button during loading
+             loadingMessage.classList.remove('hidden'); // Show loading message
+             errorMessage.classList.add('hidden'); // Hide error message
+             personalityTraitsContentDiv.innerHTML = ''; // Clear previous traits content
+             personalityTraitsSection.classList.add('hidden'); // Hide the traits section initially
 
-                // Create the payload for the API request
-                const payload = { contents: chatHistory };
-                const apiKey = ""; // API key is automatically provided in the Canvas environment if left empty
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+             try {
+                 let sexSpecificPrompt = '';
+                 if (userSex === 'male') {
+                     sexSpecificPrompt = 'specifically for a male.';
+                 } else if (userSex === 'female') {
+                     sexSpecificPrompt = 'specifically for a female.';
+                 } else {
+                     sexSpecificPrompt = 'providing general traits.';
+                 }
 
-                // Make the API call
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
+                 // Construct the prompt for the Gemini API to get personality traits
+                 const prompt = `Based on the following:
+                     Western Zodiac: '${westernSign}',
+                     Chinese Zodiac: '${chineseSign}',
+                     Egyptian Sign: '${egyptianSign}',
+                     Mayan Day Sign: '${mayanSign}',
+                     Numerology Life Path Number: ${lifePathNum}.
+                     Generate personality traits for each of these categories, ${sexSpecificPrompt}
+                     Also, provide a 'generalSummary' that synthesizes the overall personality based on the combined influence of all these signs.
+                     Provide the output as a JSON object with keys: "westernZodiac", "chineseZodiac", "egyptianSign", "mayanSign", "lifePathNumber", "generalSummary".
+                     Each trait description should be concise, about 30-50 words. Ensure no introductory phrases like "As a [sign name]," or "For [sign name]," are included in the trait descriptions.`;
 
-                // Check if the response was successful
-                if (!response.ok) {
-                    const errorData = await response.json();
-                    throw new Error(`API error: ${errorData.error.message || response.statusText}`);
-                }
+                 // Prepare the chat history for the API request
+                 let chatHistory = [];
+                 chatHistory.push({ role: "user", parts: [{ text: prompt }] });
 
-                // Parse the JSON response
-                const result = await response.json();
+                 // Create the payload for the API request with response schema
+                 const payload = {
+                     contents: chatHistory,
+                     generationConfig: {
+                         responseMimeType: "application/json",
+                         responseSchema: {
+                             type: "OBJECT",
+                             properties: {
+                                 "westernZodiac": { "type": "STRING" },
+                                 "chineseZodiac": { "type": "STRING" },
+                                 "egyptianSign": { "type": "STRING" },
+                                 "mayanSign": { "type": "STRING" },
+                                 "lifePathNumber": { "type": "STRING" },
+                                 "generalSummary": { "type": "STRING" }
+                             },
+                             required: ["westernZodiac", "chineseZodiac", "egyptianSign", "mayanSign", "lifePathNumber", "generalSummary"]
+                         }
+                     }
+                 };
 
-                // Extract the personality traits text from the response
-                if (result.candidates && result.candidates.length > 0 &&
-                    result.candidates[0].content && result.candidates[0].content.parts &&
-                    result.candidates[0].content.parts.length > 0) {
-                    const text = result.candidates[0].content.parts[0].text;
-                    personalityTraitsTextP.textContent = text; // Set the personality traits text
-                    personalityTraitsSection.classList.remove('hidden'); // Show personality traits section
-                } else {
-                    errorMessage.textContent = 'Could not generate personality traits. Unexpected API response structure.';
-                    errorMessage.classList.remove('hidden');
-                    console.error('Unexpected API response structure:', result);
-                }
-            } catch (err) {
-                console.error('Error fetching personality traits:', err);
-                errorMessage.textContent = `Failed to fetch personality traits: ${err.message}`;
-                errorMessage.classList.remove('hidden');
-            } finally {
-                getSignsButton.disabled = false; // Re-enable button
-                loadingMessage.classList.add('hidden'); // Hide loading message
-            }
-        };
+                 // IMPORTANT: For this live demonstration, the API key is handled internally.
+                 // When running this code on your local machine, you MUST replace
+                 // "YOUR_GEMINI_API_KEY_HERE" with your actual API key from Google AI Studio.
+                 const apiKey = ""; // API key is handled by the embedding environment for this demo
+                 const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
-        // Event Listener for the "Get Signs & Traits" button
-        getSignsButton.addEventListener('click', async () => {
-            const birthDate = birthDateInput.value;
-            let selectedSex = 'prefer-not-to-say';
-            for (const radio of sexRadios) {
-                if (radio.checked) {
-                    selectedSex = radio.value;
-                    break;
-                }
-            }
+                 // Make the API call
+                 const response = await fetch(apiUrl, {
+                     method: 'POST',
+                     headers: { 'Content-Type': 'application/json' },
+                     body: JSON.stringify(payload)
+                 });
 
-            // Reset display
-            errorMessage.classList.add('hidden');
-            resultsContainer.classList.add('hidden');
-            westernZodiacSection.classList.add('hidden');
-            chineseZodiacSection.classList.add('hidden');
-            egyptianSignSection.classList.add('hidden');
-            mayanSignSection.classList.add('hidden');
-            lifePathNumberSection.classList.add('hidden');
-            personalityTraitsSection.classList.add('hidden');
-            loadingMessage.classList.add('hidden');
+                 // Check if the response was successful
+                 if (!response.ok) {
+                     const errorData = await response.json();
+                     throw new Error(`API error: ${errorData.error.message || response.statusText}`);
+                 }
+
+                 // Parse the JSON response
+                 const result = await response.json();
+
+                 // Extract and parse the personality traits JSON from the response
+                 if (result.candidates && result.candidates.length > 0 &&
+                     result.candidates[0].content && result.candidates[0].content.parts &&
+                     result.candidates[0].content.parts.length > 0) {
+                     const jsonText = result.candidates[0].content.parts[0].text;
+                     const parsedTraits = JSON.parse(jsonText);
+
+                     // Helper to create and append a paragraph
+                     const appendTraitParagraph = (text) => {
+                         if (text) {
+                             const p = document.createElement('p');
+                             p.textContent = text;
+                             personalityTraitsContentDiv.appendChild(p);
+                         }
+                     };
+
+                     // Append individual trait paragraphs
+                     appendTraitParagraph(parsedTraits.westernZodiac);
+                     appendTraitParagraph(parsedTraits.chineseZodiac);
+                     appendTraitParagraph(parsedTraits.egyptianSign);
+                     appendTraitParagraph(parsedTraits.mayanSign);
+                     appendTraitParagraph(parsedTraits.lifePathNumber);
+
+                     // Append the general summary at the end
+                     if (parsedTraits.generalSummary) {
+                         const hr = document.createElement('hr'); // Add a separator line
+                         hr.className = "my-4 border-t-2 border-purple-300"; /* Thicker, more prominent separator */
+                         personalityTraitsContentDiv.appendChild(hr);
+
+                         const generalTitle = document.createElement('h4');
+                         generalTitle.className = "text-xl font-semibold text-purple-700 mb-2";
+                         generalTitle.textContent = "Overall Personality Summary:";
+                         personalityTraitsContentDiv.appendChild(generalTitle);
+
+                         const p = document.createElement('p');
+                         p.textContent = parsedTraits.generalSummary;
+                         personalityTraitsContentDiv.appendChild(p);
+                     }
+
+                     personalityTraitsSection.classList.remove('hidden'); // Show the main personality traits section
+
+                 } else {
+                     errorMessage.textContent = 'Could not generate personality traits. Unexpected API response structure.';
+                     errorMessage.classList.remove('hidden');
+                     console.error('Unexpected API response structure:', result);
+                 }
+             } catch (err) {
+                 console.error('Error fetching personality traits:', err);
+                 errorMessage.textContent = `Failed to fetch personality traits: ${err.message}`;
+                 errorMessage.classList.remove('hidden');
+             } finally {
+                 getSignsButton.disabled = false; // Re-enable button
+                 loadingMessage.classList.add('hidden'); // Hide loading message
+             }
+         };
+
+         // Event Listener for the "Get Signs & Traits" button
+         getSignsButton.addEventListener('click', async () => {
+             const birthDate = birthDateInput.value;
+             let selectedSex = 'prefer-not-to-say';
+             for (const radio of sexRadios) {
+                 if (radio.checked) {
+                     selectedSex = radio.value;
+                     break;
+                 }
+             }
+
+             // Reset display and hide all sections
+             errorMessage.classList.add('hidden');
+             resultsContainer.classList.add('hidden');
+             westernZodiacSection.classList.add('hidden');
+             chineseZodiacSection.classList.add('hidden');
+             egyptianSignSection.classList.add('hidden');
+             mayanSignSection.classList.add('hidden');
+             lifePathNumberSection.classList.add('hidden');
+             personalityTraitsSection.classList.add('hidden'); // Hide the overall traits section
+             loadingMessage.classList.add('hidden');
+
+             // Clear the personality traits content div
+             personalityTraitsContentDiv.innerHTML = '';
 
 
-            if (!birthDate) {
-                errorMessage.textContent = 'Please select your birth date.';
-                errorMessage.classList.remove('hidden');
-                return;
-            }
+             if (!birthDate) {
+                 errorMessage.textContent = 'Please select your birth date.';
+                 errorMessage.classList.remove('hidden');
+                 return;
+             }
 
-            // Calculate all signs
-            const westernSign = calculateWesternZodiacSign(birthDate);
-            westernZodiacSignSpan.textContent = westernSign;
-            westernZodiacSection.classList.remove('hidden');
+             // Calculate all signs
+             const westernSign = calculateWesternZodiacSign(birthDate);
+             westernZodiacSignSpan.textContent = westernSign;
+             westernZodiacSection.classList.remove('hidden');
 
-            const chineseSign = calculateChineseZodiacSign(birthDate);
-            chineseZodiacSignSpan.textContent = chineseSign;
-            chineseZodiacDescSpan.textContent = chineseSign;
-            chineseZodiacSection.classList.remove('hidden');
+             const chineseSign = calculateChineseZodiacSign(birthDate);
+             chineseZodiacSignSpan.textContent = chineseSign;
+             chineseZodiacSection.classList.remove('hidden');
 
-            const egyptian = calculateEgyptianSign(birthDate);
-            egyptianSignSpan.textContent = egyptian;
-            egyptianSignDescSpan.textContent = egyptian;
-            egyptianSignSection.classList.remove('hidden');
+             const egyptian = calculateEgyptianSign(birthDate);
+             egyptianSignSpan.textContent = egyptian;
+             egyptianSignSection.classList.remove('hidden');
 
-            const mayan = calculateMayanSign(birthDate);
-            mayanSignSpan.textContent = mayan;
-            mayanSignDescSpan.textContent = mayan;
-            mayanSignSection.classList.remove('hidden');
+             const mayan = calculateMayanSign(birthDate);
+             mayanSignSpan.textContent = mayan;
+             mayanSignSection.classList.remove('hidden');
 
-            const lifePath = calculateLifePathNumber(birthDate);
-            lifePathNumberSpan.textContent = lifePath;
-            lifePathNumberDescSpan.textContent = lifePath;
-            lifePathNumberSection.classList.remove('hidden');
+             const lifePath = calculateLifePathNumber(birthDate);
+             lifePathNumberSpan.textContent = lifePath;
+             lifePathNumberSection.classList.remove('hidden');
 
-            resultsContainer.classList.remove('hidden'); // Show the main results container
+             resultsContainer.classList.remove('hidden'); // Show the main results container
 
-            // Fetch the personality traits based on all calculated signs and selected sex
-            if (westernSign !== 'Unknown') {
-                await fetchPersonalityTraits(westernSign, chineseSign, egyptian, mayan, lifePath, selectedSex);
-            } else {
-                errorMessage.textContent = 'Invalid birth date provided for Western Zodiac calculation.';
-                errorMessage.classList.remove('hidden');
-            }
-        });
-    </script>
-</body>
-</html>
+             // Fetch the personality traits based on all calculated signs and selected sex
+             if (westernSign !== 'Unknown') {
+                 await fetchPersonalityTraits(westernSign, chineseSign, egyptian, mayan, lifePath, selectedSex);
+             } else {
+                 errorMessage.textContent = 'Invalid birth date provided for Western Zodiac calculation.';
+                 errorMessage.classList.remove('hidden');
+             }
+         });
+     </script>
+ </body>
+ </html>
+ 
